@@ -63,7 +63,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use(localsMiddleware);
 
 app.get(
-    "/overlay",
+    "/",
     wrapAsync(async (req, res) => {
         const jacketProducts = await Product.find({ productType: "jacket" });
         res.render("home.ejs", { jacketProducts });
