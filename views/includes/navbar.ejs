@@ -1,0 +1,212 @@
+<nav>
+    <div id="nav-bar">
+        <a href="/overlay">
+            <img
+                class="nav-img logo-img"
+                src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1700568099/logo_mpm0th.webp"
+                alt="logo"
+        /></a>
+
+        <div id="nav-link">
+            <ul id="desktop-nav-link">
+                <li>
+                    <a class="animated-underline" href="/overlay">Home</a>
+                </li>
+                <li>
+                    <a class="animated-underline" href="/collections/all-products">Show All</a>
+                </li>
+                <li class="show-menu" data-menu-id="desktop-menu-1">
+                    <a class="animated-underline" href="/collections/man">Man</a>
+                    <ul id="desktop-menu-1" class="desktop-menus">
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/collections/man/jacket"
+                                >Jacket</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/collections/man"
+                                >T-Shirts</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/collections/man"
+                                >Shirts</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/collections/man/polo-Tshirt"
+                                >Polo T-Shirts</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/collections/man"
+                                >Hoodies</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/collections/man"
+                                >Sweatshirts</a
+                            >
+                        </li>
+                    </ul>
+                </li>
+                <li class="show-menu" data-menu-id="desktop-menu-2">
+                    <a class="animated-underline" href="/collections/woman">Woman</a>
+                    <ul id="desktop-menu-2" class="desktop-menus">
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/collections/woman"
+                                >Empower Her</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/collections/woman"
+                                >Crop Top</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/collections/woman"
+                                >Oversized T-Shirts</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/collections/woman"
+                                >Hoodies</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/collections/woman"
+                                >Sweatshirts</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/collections/woman"
+                                >Bottom</a
+                            >
+                        </li>
+                    </ul>
+                </li>
+                <li class="show-menu" data-menu-id="desktop-menu-3">
+                    <a class="animated-underline" href="/collections/all-products">Rich Cotton</a>
+                    <ul id="desktop-menu-3" class="desktop-menus">
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/collections/all-products"
+                                >Supima + modal</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/collections/all-products"
+                                >Supima</a
+                            >
+                        </li>
+                    </ul>
+                </li>
+                <li class="show-menu" data-menu-id="desktop-menu-4">
+                    <a class="animated-underline" href="/pages/faqs">Get in Touch!</a>
+                    <ul id="desktop-menu-4" class="desktop-menus">
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/pages/faqs"
+                                >FAQ</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/pages/about-us"
+                                >About Us</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="animated-underline"
+                                class="nav-dropdown__link link--faded"
+                                href="/pages/contact-us"
+                                >Contact Us</a
+                            >
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="nav-icon">
+                <a class="animated-underline" href="/account/register">Sign Up</a>
+                <% if (user) { %>
+                <a class="animated-underline" href="/account/logout">Logout</a>
+                <% } else { %>
+                <a class="animated-underline" href="/account/login">Sign In</a>
+                <% } %>
+
+                <img
+                    src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1700568065/market_lbmjer.webp"
+                    alt="market-icon"
+                    class="nav-bag-icon nav-img"
+                />
+            </div>
+        </div>
+
+        <button class="menu" onclick="toggleMenu()" aria-label="Main Menu">
+            <svg width="30" height="30" viewBox="0 0 100 100">
+                <path
+                    class="line line1"
+                    d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path
+                    class="line line3"
+                    d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                />
+            </svg>
+        </button>
+        <div class="nav-slider">
+            <i class="fa-solid fa-xmark fa-xl slider-icon" style="color: #ffffff"></i>
+            <div class="slider-content">
+                <h1>Your Bag is empty.</h1>
+                <a href="/collections/all-products">Let's Start Shopping</a>
+            </div>
+        </div>
+    </div>
+</nav>

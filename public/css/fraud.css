@@ -1,0 +1,46 @@
+.fraud-protection-section {
+    background-color: #252630;
+
+    font-family: "Montserrat", sans-serif;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #252630;
+    padding: 3rem 0;
+}
+
+.fraud-container {
+    width: 70%;
+}
+
+.fraud-message {
+    margin-bottom: 1rem;
+    line-height: 2.2;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.fraud-message:last-child {
+    margin-bottom: 0;
+}
+
+#orderInstructions {
+    font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+    .fraud-protection-section {
+        height: max-content;
+    }
+    .fraud-container {
+        width: 90%;
+    }
+
+    .fraud-message {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,142 @@
+<% layout("./layouts/boilerplate.ejs") -%> <% pageTitle = product.title %> <% templateStyles =
+"/css/product-info.css" %> <% templateJavaScript = "/js/product-info.js" %>
+<section class="product-container">
+    <div class="image-container">
+        <div class="small-images">
+            <% product.images.forEach((image, index) => { %> <% let modifiedImage =
+            image.replace(/width=\d+/i, 'width=57'); %>
+            <img
+                src="<%= modifiedImage %>"
+                alt="Product Image"
+                onmouseover="changeMainImage(event)"
+            />
+            <% }); %>
+        </div>
+        <div class="main-image">
+            <img
+                src="<%= product.images[0].replace(/width=\d+/i, 'width=626&height=626') %>"
+                alt="Product Image"
+                id="magnify-img"
+            />
+        </div>
+    </div>
+
+    <div class="info-container">
+        <h3><%= product.title %></h3>
+        <p class="price">&#8377; <%= product.price.toLocaleString("en-IN") + ".00" %></p>
+        <hr />
+        <p class="size" onclick="scrollToSizeChart()">Size:</p>
+
+        <div class="size-selection-message">
+            <span>Please select a size to add to cart</span>
+        </div>
+
+        <div class="size-options-container">
+            <% product.sizes.forEach((size, index) => { %>
+            <div class="size-option">
+                <input
+                    id="sizeOption<%= index + 1 %>"
+                    type="radio"
+                    name="sizeOption"
+                    value="<%= size %>"
+                />
+                <label for="sizeOption<%= index + 1 %>"><%= size %></label>
+            </div>
+            <% }); %>
+        </div>
+
+        <p class="quantity">Quantity:</p>
+
+        <form class="quantity-form">
+            <div class="value-button" id="decrease" onclick="decreaseValue('quantity')">-</div>
+            <input type="number" id="quantity" value="1" min="1" />
+            <div class="value-button" id="increase" onclick="increaseValue('quantity')">+</div>
+        </form>
+
+        <button class="btn add-to-cart">ADD TO CART</button>
+        <button class="btn buy-now">BUY IT NOW</button>
+    </div>
+</section>
+
+<section class="product-description">
+    <div>
+        <p class="product-description-heading">DESCRIPTION</p>
+        <hr class="divider" />
+    </div>
+    <div class="product-description-text">
+        <% product.description.forEach(desc => { %>
+        <p><%= desc %></p>
+        <% }); %>
+
+        <ul>
+            <% product.information.forEach(info => { %>
+            <li><%= info %></li>
+            <% }); %>
+        </ul>
+    </div>
+
+    <div class="product-care-box">
+        <p>PRODUCT CARE</p>
+        <p>Dry Clean Only.</p>
+        <p>Please take care of me so we can spend a long time together.</p>
+    </div>
+
+    <div class="size-chart">
+        <img
+            id="size-chart-img"
+            src="https://cdn.shopify.com/s/files/1/0566/0839/1368/files/regular_fit_sizechart_480x480.png?v=1689411691"
+            alt="Size Guide Image"
+        />
+    </div>
+</section>
+
+<section class="related-products-container">
+    <h1>You May Also Like</h1>
+    <div class="related-products">
+        <% closestProducts.map(product => { %>
+        <div class="related-product" id="<%= product.id %>">
+            <div class="product-image">
+                <% let modifiedImage = product.imageUrl.replace(/width=\d+/i, 'width=320') %>
+                <img src="<%= modifiedImage %>" alt="Product Image" />
+            </div>
+            <div class="product-text">
+                <p><%= product.title %></p>
+                <p class="price">&#8377; <%= product.price.toLocaleString("en-IN") + ".00" %></p>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</section>
+
+<section id="benefit-sections">
+    <div class="benefit-section">
+        <img
+            src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1702779231/hkqxxbbi431frdg2kfxu.png"
+            alt="Fast Delivery Van Icon"
+        />
+        <div>
+            <p>FREE & FAST DELIVERY</p>
+            <p>Within 48 hours across India delivery.</p>
+        </div>
+    </div>
+    <div class="benefit-section">
+        <img
+            src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1702779231/ecvl5mg6vzauooltfth5.png"
+            alt="Exchange Icon"
+        />
+        <div>
+            <p>15 - DAY RETURNS</p>
+            <p>Exchange & Returns within 15 days.</p>
+        </div>
+    </div>
+    <div class="benefit-section">
+        <img
+            src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1702779231/p22lu1my3e20djycq2cb.png"
+            alt="Email Icon"
+        />
+        <div>
+            <p>CONTACT US</p>
+            <p>support@overlaysclothing.com</p>
+        </div>
+    </div>
+</section>

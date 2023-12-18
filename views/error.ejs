@@ -1,0 +1,28 @@
+<% layout("./layouts/boilerplate.ejs") %> <% pageTitle = "Error" %>
+<style>
+    .error-container {
+        height: 70vh;
+        padding-top: 80px;
+        background-color: #252630;
+    }
+    .error-msg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .alert-heading {
+        font-size: 1.3rem;
+        color: #e74747;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 500;
+    }
+</style>
+<body>
+    <div class="error-container">
+        <div class="row">
+            <div class="alert alert-danger col-6 offset-3 error-msg" role="alert">
+                <p class="alert-heading"><%- message %></p>
+            </div>
+        </div>
+    </div>
+</body>

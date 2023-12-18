@@ -1,0 +1,21 @@
+<% layout("./layouts/boilerplate.ejs") -%> <% pageTitle = "Exchange-Return Your Order" %> <%
+templateStyles = "/css/return.css" %>
+<div class="return-container">
+    <div class="return-content">
+        <div class="return-heading">
+            <h2>Returns & Exchanges</h2>
+            <p>Enter your order number and Email or Phone to find your order</p>
+        </div>
+        <div class="input-section">
+            <form action="">
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" />
+                <button>Find Your Order</button>
+            </form>
+            <p class="upload-info">
+                Please upload the product images where the brand tag is clearly visible to avoid any
+                rejection of your return or exchange request.
+            </p>
+        </div>
+    </div>
+</div>

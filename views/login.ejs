@@ -1,0 +1,47 @@
+<% layout("./layouts/boilerplate.ejs") -%> <% pageTitle = "Login" %> <% templateStyles =
+"/css/login.css" %>
+
+<section class="signin-section">
+    <div class="signin-container">
+        <h1 class="signin-header">Login</h1>
+
+        <div class="signin-form-container">
+            <form
+                class="signin-form needs-validation"
+                action="/account/login"
+                method="post"
+                novalidate
+            >
+                <div class="input-container">
+                    <label for="username" class="form-label">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        class="signin-input form-control"
+                        required
+                    />
+                    <div class="invalid-feedback">Enter a valid Username</div>
+                </div>
+
+                <div class="input-container">
+                    <label for="password" class="form-label">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        class="signin-input form-control"
+                        required
+                    />
+                    <div class="invalid-feedback">Enter a valid password</div>
+                </div>
+
+                <button class="signin-button" type="submit">Login</button>
+            </form>
+        </div>
+        <p class="login-link">
+            <span>New customer?</span
+            ><a href="http://localhost:8080/account/register">Create an account</a>
+        </p>
+    </div>
+</section>

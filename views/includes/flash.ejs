@@ -1,0 +1,5 @@
+<% layout("./layouts/boilerplate.ejs") -%> <% if (successMsg && successMsg.length > 0) { %>
+<div class="alert alert-success flash-msg"><%= successMsg %></div>
+<% } %> <% if (error && error.length > 0) { %>
+<div class="alert alert-success flash-msg"><%= error %></div>
+<% } %>

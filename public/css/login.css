@@ -1,0 +1,118 @@
+.signin-section {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 95vh;
+    padding: 80px 0;
+    background-color: #252630;
+}
+
+.signin-container {
+    width: 30%;
+}
+
+.signin-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+}
+
+.signin-form-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.signin-form {
+    width: 100%;
+}
+
+.input-container {
+    margin-bottom: 1.5rem;
+}
+
+.signin-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    caret-color: white;
+}
+
+.signin-input:focus {
+    background-color: black;
+    color: white;
+}
+
+.signin-input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #000 inset !important;
+    -webkit-text-fill-color: white !important;
+}
+
+.signin-button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 400;
+    background-color: #3374ee;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 0.8px;
+}
+
+.login-link span {
+    opacity: 0.7;
+}
+
+.login-link a {
+    color: #035bff;
+    text-decoration: none;
+    margin-left: 5px;
+    font-weight: bold;
+    text-decoration: underline;
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.login-link a:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 1100px) {
+    .signin-container {
+        width: 40%;
+    }
+
+    .signin-input,
+    .signin-button {
+        padding: 5px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .signin-container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .signin-container {
+        width: 80%;
+    }
+}

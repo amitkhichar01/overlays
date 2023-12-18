@@ -1,0 +1,68 @@
+.shipping-container {
+    font-family: "Montserrat", sans-serif;
+    background-color: #252630;
+    padding: 3rem 8rem;
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+
+.shipping-section {
+    margin-top: 20px;
+}
+
+.policy-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #2997ff;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #2997ff;
+}
+
+.policy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.policy-item {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.policy-text {
+    line-height: 2;
+    letter-spacing: 1.3px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.sub-section {
+    margin-top: 20px;
+}
+
+@media (max-width: 1100px) {
+    .shipping-container {
+        padding: 3rem 1rem;
+    }
+
+    .policy-title {
+        font-size: 1.3rem;
+    }
+
+    .sub-title {
+        font-size: 1.1rem;
+    }
+
+    .policy-item,
+    .policy-text {
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+        letter-spacing: 1px;
+    }
+}

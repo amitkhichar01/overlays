@@ -1,0 +1,24 @@
+<% layout("./layouts/boilerplate.ejs") -%> <% pageTitle = "All-Products" %> <% templateStyles =
+"/css/all-products.css" %>
+
+<section class="product-collection">
+    <div class="product-list">
+        <% products.forEach(product => { %>
+        <article class="product" id="<%= product._id %>">
+            <div class="product-image">
+                <img src="<%= product.images[0].replace(/width=\d+/i, "width=626&height=626") %>"
+                alt="Product Image" />
+            </div>
+            <h2 class="product-title"><%= product.title %></h2>
+            <p class="product-price">
+                <span>Price: </span>&#8377; <%= product.price.toLocaleString("en-IN") + ".00" %>
+            </p>
+            <div class="product-sizes">
+                <% product.sizes.forEach(size => { %>
+                <p class="size-item"><%= size %></p>
+                <% }) %>
+            </div>
+        </article>
+        <% }) %>
+    </div>
+</section>

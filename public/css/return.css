@@ -1,0 +1,133 @@
+.return-container {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #252630;
+    color: white;
+    padding: 3.5rem 0;
+    height: 55vw;
+}
+
+.return-content {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.return-heading h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.return-heading p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.input-section {
+    line-height: 2rem;
+    width: 100%;
+}
+
+.input-section input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.input-section button {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #3374ee;
+    color: white;
+    cursor: pointer;
+}
+
+.upload-info {
+    margin-top: 3rem;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 1100px) {
+    .return-content {
+        width: 50%;
+    }
+
+    .return-heading h2 {
+        font-size: 2rem;
+    }
+
+    .return-heading p {
+        font-size: 1rem;
+    }
+
+    .upload-info {
+        font-size: 1rem;
+    }
+
+    .input-section input,
+    .input-section button {
+        width: 80%;
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .return-container {
+        height: max-content;
+    }
+
+    .return-content {
+        width: 65%;
+    }
+
+    .return-heading p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .return-content {
+        width: 90%;
+    }
+
+    .input-section input,
+    .input-section button {
+        width: 80%;
+        font-size: 1.1rem;
+        padding: 5px;
+    }
+
+    .return-heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .upload-info {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .input-section input,
+    .input-section button {
+        width: 90%;
+        font-size: 1rem;
+    }
+}

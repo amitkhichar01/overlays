@@ -1,0 +1,133 @@
+#footer {
+    font-family: "Quicksand", sans-serif;
+    padding: 3rem 2rem;
+    background-color: black;
+}
+
+.footer-item-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.footer-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    line-height: 1.9rem;
+    letter-spacing: 1px;
+}
+
+.footer-item p {
+    margin: 0;
+}
+
+.footer-item-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.footer-item a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    position: relative;
+}
+
+.footer-item:nth-child(3) input {
+    padding: 0.8rem;
+    width: 90%;
+}
+
+.footer-item:nth-child(3) input[placeholder] {
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 1.5px solid rgb(255, 255, 255);
+    color: black;
+}
+
+.footer-item:nth-child(4) div {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgb(36, 36, 36);
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.footer-item:nth-child(4) div i {
+    padding: 1.8rem 1.5rem;
+    opacity: 0.9;
+    border-right: 1px solid rgb(35, 35, 35);
+    transform: opacity 0.3s ease;
+}
+
+.footer-item:nth-child(4) div i:hover {
+    opacity: 1;
+}
+
+.footer-copyright-section {
+    margin-top: 3rem;
+    letter-spacing: 1.2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.footer-copyright-section a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 1100px) {
+    .footer-item-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 4rem;
+        column-gap: auto;
+    }
+
+    .footer-item {
+        gap: 0.5rem;
+    }
+
+    .footer-item:nth-child(3) input[placeholder] {
+        padding: 0.2rem;
+        border-radius: 3px;
+    }
+
+    .footer-item:nth-child(4) div i {
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    #footer {
+        padding: 3rem 1rem;
+    }
+    .footer-item-title {
+        font-size: 1rem;
+    }
+
+    .footer-item a {
+        font-size: 0.8rem;
+    }
+
+    .footer-item p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .footer-item-list {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+    }
+}

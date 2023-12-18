@@ -1,0 +1,240 @@
+<% layout("./layouts/boilerplate.ejs") -%> <% pageTitle = "Overlays Clothing Official Store" %> <%
+user = user%> <% templateStyles = "/css/home.css" %> <% templateJavaScript = "/js/home.js" %>
+
+<main class="home-main-container">
+    <section id="hero-section">
+        <div id="hero-image">
+            <a href="/collections/man/jacket"
+                ><img
+                    src="https://cdn.shopify.com/s/files/1/0566/0839/1368/files/banner01-dekstop.jpg?v=1699099586"
+                    alt="Abstract Banner 1"
+                    id="banner-one"
+            /></a>
+        </div>
+    </section>
+    <section class="home-jackets-section">
+        <div class="home-jackets-container">
+            <% jacketProducts.forEach(product => { %>
+            <div class="home-jacket-box" id="<%= product._id %>">
+                <div class="home-jacket-image">
+                    <img src="<%= product.images[0].replace(/width=\d+/i, "width=626&height=626")
+                    %>" alt="Product Image" />
+                </div>
+                <p class="home-jacket-title"><%= product.title %></p>
+                <button>Shop Now</button>
+            </div>
+            <% }) %>
+        </div>
+    </section>
+
+    <section id="category-section">
+        <h2>Explore Categories</h2>
+        <div id="category">
+            <div class="collections new-drop category-box-1">
+                <a href="/collections/man/jacket">
+                    <img
+                        src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1702779233/s2tzb5ng09z31n6xlx0t.png"
+                        alt="Cloth-Img"
+                /></a>
+            </div>
+            <div class="collections t-shirts category-box-2">
+                <a href="/collections/man/jacket">
+                    <img
+                        src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1702779232/hne15nviuhqkcfsjr5vv.png"
+                        alt="Cloth-Img"
+                /></a>
+            </div>
+
+            <div class="collections crop-top category-box-4">
+                <a href="/collections/woman"
+                    ><img
+                        src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1702779233/u4ewhbf1nxh08kretciy.png"
+                        alt="Cloth-Img"
+                /></a>
+            </div>
+
+            <div class="collections polo-shirts category-box-6">
+                <a href="/collections/man/polo-Tshirt"
+                    ><img
+                        src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1702779233/xf0ksrdpgsfqdqzjvair.png"
+                        alt="Cloth-Img"
+                /></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefit-sections">
+        <div class="benefit-section" role="alert">
+            <img
+                src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1702779231/hkqxxbbi431frdg2kfxu.png"
+                alt="Fast Delivery Van Icon"
+            />
+            <div>
+                <p>FREE &amp; FAST DELIVERY</p>
+                <p>Within 48 hours across India delivery.</p>
+            </div>
+        </div>
+        <div class="benefit-section">
+            <img
+                src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1702779231/ecvl5mg6vzauooltfth5.png"
+                alt="Exchange Icon"
+            />
+            <div>
+                <p>15 - DAY RETURNS</p>
+                <p>Exchange &amp; Returns within 15 days.</p>
+            </div>
+        </div>
+        <div class="benefit-section">
+            <img
+                src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1702779231/p22lu1my3e20djycq2cb.png"
+                alt="Email Icon"
+            />
+            <div>
+                <p>CONTACT US</p>
+                <p>support@overlaysclothing.com</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="banner-img">
+            <a href="/collections/man/jacket">
+                <img
+                    src="https://cdn.shopify.com/s/files/1/0566/0839/1368/files/banner02-dekstop.jpg?v=1699099589"
+                    alt="Abstract Banner 2"
+                    id="banner-two"
+                />
+            </a>
+        </div>
+        <div class="banner-img">
+            <a href="/collections/man/jacket">
+                <img
+                    src="https://cdn.shopify.com/s/files/1/0566/0839/1368/files/banner03-dekstop.jpg?v=1699100953"
+                    alt="Abstract Banner 3"
+                    id="banner-three"
+                />
+            </a>
+        </div>
+        <div class="banner-img">
+            <a href="/collections/man/jacket">
+                <img
+                    src="https://cdn.shopify.com/s/files/1/0566/0839/1368/files/banner04-dekstop.jpg?v=1699100958"
+                    alt="Abstract Banner 4"
+                    id="banner-four"
+                />
+            </a>
+        </div>
+        <div class="layer-img-container">
+            <a href="/collections/man/jacket">
+                <img
+                    src="https://cdn.shopify.com/s/files/1/0566/0839/1368/files/card01.jpg?v=1699101859"
+                    alt="Product Card 1"
+                />
+            </a>
+            <a href="/collections/man/jacket">
+                <img
+                    src="https://cdn.shopify.com/s/files/1/0566/0839/1368/files/card02.jpg?v=1699101875"
+                    alt="Product Card 2"
+                />
+            </a>
+        </div>
+        <div class="layer-img-container">
+            <a href="/collections/man/jacket">
+                <img
+                    src="https://cdn.shopify.com/s/files/1/0566/0839/1368/files/card03.jpg?v=1699101882"
+                    alt="Product Card 3"
+                />
+            </a>
+            <a href="/collections/man/jacket">
+                <img
+                    src="https://cdn.shopify.com/s/files/1/0566/0839/1368/files/card04.jpg?v=1699101881"
+                    alt="Product Card 4"
+                />
+            </a>
+        </div>
+    </section>
+
+    <section id="instagram-section">
+        <p>
+            FOLLOW US
+            <a href="https://www.instagram.com/overlaysclothing/?hl=en" target="_blank"
+                >INSTAGRAM</a
+            >
+        </p>
+
+        <div class="instagram-img-box">
+            <div>
+                <a href="https://www.instagram.com/overlaysclothing/?hl=en" target="_blank"
+                    ><img
+                        src="https://scontent.cdninstagram.com/v/t39.30808-6/404372876_17982727583539604_4026330606035082046_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE0NDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=108&_nc_ohc=rP8_K8HShhsAX8dROog&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzI0MTg1MzYzMzY3MTIyNjU3Ng%3D%3D.2-ccb7-5&oh=00_AfCu3nKSlDvGf6kQF5FwzcUlWcGBdNz4R4JHIXlzlADWhA&oe=65821F70&_nc_sid=10d13b"
+                        alt="Instagram Post 1"
+                /></a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/overlaysclothing/?hl=en" target="_blank"
+                    ><img
+                        src="https://scontent.cdninstagram.com/v/t39.30808-6/402290410_17982041747539604_1193916783980379740_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE3OTkuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=108&_nc_ohc=E-4lAHUhhfAAX_VBlHn&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzIzODA5ODE2NjE1MDQxNDUxOA%3D%3D.2-ccb7-5&oh=00_AfAzrigAJYsZ6IgiG8o77sCq3Uebv9zpc9Yz-tgcDF7avg&oe=6582A635&_nc_sid=10d13b"
+                        alt="Instagram Post 2"
+                /></a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/overlaysclothing/?hl=en" target="_blank"
+                    ><img
+                        src="https://instagram.fjai1-4.fna.fbcdn.net/v/t39.30808-6/358109307_17963860064539604_832753567542329596_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE3OTEuc2RyIn0&_nc_ht=instagram.fjai1-4.fna.fbcdn.net&_nc_cat=108&_nc_ohc=YmZ-zprGA_oAX8dCrjt&edm=ABmJApAAAAAA&ccb=7-5&ig_cache_key=MzE0MDc3OTcwODQzMDMwNDA3Mg%3D%3D.2-ccb7-5&oh=00_AfBKixLUfm-98pPLyz_jtKbq33v0FnNcNrvxbnuAySalrQ&oe=65823BA2&_nc_sid=b41fef"
+                        alt="Instagram Post 3"
+                /></a>
+            </div>
+            <div>
+                <a href=""
+                    ><img
+                        src="https://instagram.fjai1-2.fna.fbcdn.net/v/t39.30808-6/400049395_18286773529148918_3829033224353842359_n.jpg?stp=dst-jpg_e35_p1080x1080_sh0.08&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=instagram.fjai1-2.fna.fbcdn.net&_nc_cat=102&_nc_ohc=pD_eT6GPQ0kAX9h3sQ5&edm=ABmJApAAAAAA&ccb=7-5&ig_cache_key=MzIzNDQ0MzQxMzA4ODU0MTk5OA%3D%3D.2-ccb7-5&oh=00_AfD1V39ygHcT-g76SLrlmTgxeX2i-azeyMqj9FQ4i1VlSg&oe=6583423E&_nc_sid=b41fef"
+                        alt="Instagram Post 4"
+                /></a>
+            </div>
+            <div>
+                <a href=""
+                    ><img
+                        src="https://scontent.cdninstagram.com/v/t39.30808-6/372636175_17971991324539604_3885544607630993958_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE3Mzkuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=108&_nc_ohc=Zw-X1E7EZl4AX_u-fAV&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzE4Mzc0MzQwNDQ5MjA1MDI2NA%3D%3D.2-ccb7-5&oh=00_AfCFLMMRetBIyHof1wOdEvcwG-KINYaFAkhMs8v7C-Jm3g&oe=6582E747&_nc_sid=10d13b"
+                        alt="Instagram Post 5"
+                /></a>
+            </div>
+            <div>
+                <a href=""
+                    ><img
+                        src="https://instagram.fjai1-4.fna.fbcdn.net/v/t39.30808-6/357731861_17964209066539604_40145700335901722_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE3ODIuc2RyIn0&_nc_ht=instagram.fjai1-4.fna.fbcdn.net&_nc_cat=108&_nc_ohc=jKSxlT47q98AX8Rv6Hh&edm=ABmJApAAAAAA&ccb=7-5&ig_cache_key=MzE0MjQ3MzYxMjEwODAzNDgyOA%3D%3D.2-ccb7-5&oh=00_AfCjwQA8_itNB0A37oFjDMFNw3Ucr6jJ-gTCIwhOrSrxVw&oe=658393D4&_nc_sid=b41fef"
+                        alt="Instagram Post 6"
+                /></a>
+            </div>
+
+            <div>
+                <a href=""
+                    ><img
+                        src="https://instagram.fjai1-4.fna.fbcdn.net/v/t39.30808-6/401007907_17981007365539604_9071884891569993023_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=instagram.fjai1-4.fna.fbcdn.net&_nc_cat=108&_nc_ohc=3nxi3-52RmoAX9T85JT&edm=ABmJApAAAAAA&ccb=7-5&ig_cache_key=MzIzMjg3MTcyNzU1MzEwMDk5MQ%3D%3D.2-ccb7-5&oh=00_AfBiGZvXmfzcP0YZBZieO6b6nQGCq8k1tUgENF9OqdhiGQ&oe=6582412C&_nc_sid=b41fef"
+                        alt="Instagram Post 7"
+                /></a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/overlaysclothing/?hl=en" target="_blank"
+                    ><img
+                        src="https://scontent.cdninstagram.com/v/t39.30808-6/401406356_17981325014539604_4347162160213099485_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE3OTIuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=108&_nc_ohc=CaATezUhELgAX-C0p-f&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzIzNDMwNzk1MTM2Mjg1NTAwNg%3D%3D.2-ccb7-5&oh=00_AfDWg5PFgkvcMQpFYw5KKWZFdlZcsGXOZs_1gyxOURoigg&oe=6581BE62&_nc_sid=10d13b"
+                        alt="Instagram Post 8"
+                /></a>
+            </div>
+
+            <div>
+                <a href=""
+                    ><img
+                        src="https://instagram.fjai1-4.fna.fbcdn.net/v/t39.30808-6/378032927_17973541265539604_3909162573273533442_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE3Njguc2RyIn0&_nc_ht=instagram.fjai1-4.fna.fbcdn.net&_nc_cat=108&_nc_ohc=B4bTafDS8vYAX9iTUEq&edm=ABmJApAAAAAA&ccb=7-5&ig_cache_key=MzE5MjMzMTY0NzI3NzQyODQ2Ng%3D%3D.2-ccb7-5&oh=00_AfBXL-LpRCti_ya3VqfNf6I-8dObWvZVRYfgpyp7KSB2Og&oe=65825789&_nc_sid=b41fef"
+                        alt="Instagram Post 9"
+                /></a>
+            </div>
+
+            <div>
+                <a href=""
+                    ><img
+                        src="https://scontent.cdninstagram.com/v/t39.30808-6/407682969_17984308058539604_6060274205615092200_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE0NDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=108&_nc_ohc=55YIZOY7onsAX-JWdGk&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzI1MDQ0ODgzMjk0NDYzNDQ1Ng%3D%3D.2-ccb7-5&oh=00_AfCHleWxX4FU82O4mF488pLKn7nX3iRvsC6BLtUoofAHdg&oe=65823545&_nc_sid=10d13b"
+                        alt="Instagram Post 10"
+                /></a>
+            </div>
+        </div>
+    </section>
+</main>
