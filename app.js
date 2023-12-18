@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== "production") {
+    require("dotenv").config();
+}
+
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -17,9 +21,10 @@ const Product = require("./models/products.js");
 
 const { localsMiddleware } = require("./middleware.js");
 const wrapAsync = require("./utils/wrapAsync.js");
+const dbUrl = process.env.ATLASDB_URL;
 
 async function main() {
-    await mongoose.connect("mongodb://127.0.0.1:27017/overlays");
+    await mongoose.connect(dbUrl);
 }
 main()
     .then((response) => {
