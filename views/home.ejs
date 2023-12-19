@@ -1,7 +1,6 @@
 <% layout("./layouts/boilerplate.ejs") -%> <% pageTitle = "Overlays Clothing Official Store" %> <%
 user = user%> <% templateStyles = "/css/home.css" %> <% templateJavaScript = "/js/home.js" %>
-
-<main class="home-main-container">
+<main class="home-main-container" data-scroll-container>
     <section id="hero-section">
         <div id="hero-image">
             <a href="/collections/man/jacket"
@@ -28,16 +27,16 @@ user = user%> <% templateStyles = "/css/home.css" %> <% templateJavaScript = "/j
     </section>
 
     <section id="category-section">
-        <h2>Explore Categories</h2>
+        <h2 class="collections-gsap">Explore Categories</h2>
         <div id="category">
-            <div class="collections new-drop category-box-1">
+            <div class="collections collections-gsap">
                 <a href="/collections/man/jacket">
                     <img
                         src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1702779233/s2tzb5ng09z31n6xlx0t.png"
                         alt="Cloth-Img"
                 /></a>
             </div>
-            <div class="collections t-shirts category-box-2">
+            <div class="collections collections-gsap">
                 <a href="/collections/man/jacket">
                     <img
                         src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1702779232/hne15nviuhqkcfsjr5vv.png"
@@ -45,7 +44,7 @@ user = user%> <% templateStyles = "/css/home.css" %> <% templateJavaScript = "/j
                 /></a>
             </div>
 
-            <div class="collections crop-top category-box-4">
+            <div class="collections collections-gsap">
                 <a href="/collections/woman"
                     ><img
                         src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1702779233/u4ewhbf1nxh08kretciy.png"
@@ -53,7 +52,7 @@ user = user%> <% templateStyles = "/css/home.css" %> <% templateJavaScript = "/j
                 /></a>
             </div>
 
-            <div class="collections polo-shirts category-box-6">
+            <div class="collections collections-gsap">
                 <a href="/collections/man/polo-Tshirt"
                     ><img
                         src="https://res.cloudinary.com/dcen2mnhx/image/upload/v1702779233/xf0ksrdpgsfqdqzjvair.png"

@@ -210,3 +210,15 @@
         </div>
     </div>
 </nav>
+
+<% if (successMsg && successMsg.length > 0) { %>
+<div class="alert alert-success flash-msg flash-success-msg">
+    <p><%=successMsg%></p>
+    <i class="fa-solid fa-xmark fa-xl slider-icon" style="color: #ffffff"></i>
+</div>
+<% } %> <% if (error && error.length > 0) { %>
+<div class="alert alert-danger text-danger flash-msg flash-error-msg">
+    <p><%=error%></p>
+    <i class="fa-solid fa-xmark fa-xl slider-icon" style="color: #ffffff"></i>
+</div>
+<% } %>

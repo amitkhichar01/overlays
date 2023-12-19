@@ -1,10 +1,43 @@
 .flash-msg {
-    z-index: 110;
-    margin: 0;
-    border-radius: 0;
+    z-index: 99;
+    margin-top: 0;
+    padding: 5px;
     position: fixed;
-    top: 0;
+    border-radius: 0;
+    top: 33px;
     width: 100%;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flash-msg i::before {
+    position: absolute;
+    top: -2px;
+    right: 5px;
+}
+
+.flash-error-msg i::before {
+    color: #893636;
+}
+
+.flash-success-msg i::before {
+    color: #1e5128;
+}
+
+.flash-msg p {
+    margin: 0;
+}
+
+.flash-error-msg p {
+    color: #893636;
+}
+
+.flash-success-msg p {
+    color: #1e5128;
 }
 
 #nav-bar {
@@ -17,7 +50,7 @@
     gap: 3rem;
     position: fixed;
     top: 0;
-    z-index: 99;
+    z-index: 100;
     padding: 0.3vw 0;
 }
 .nav-img {
@@ -234,6 +267,10 @@
 }
 
 @media (max-width: 1000px) {
+    .flash-msg p {
+        font-size: 0.9rem;
+    }
+
     .logo-img {
         margin-left: 1rem;
         height: 1.5rem;
@@ -280,5 +317,9 @@
 
     .nav-slider {
         padding: 1rem 0.5rem;
+    }
+
+    .flash-msg i {
+        display: none;
     }
 }

@@ -62,10 +62,17 @@ navBag.addEventListener("click", () => {
     navSlider.style.display = "inline-flex";
 });
 
-// const flashMsg = document.querySelector(".flash-msg");
-// flashMsg.addEventListener("click", (event) => {
-//     flashMsg.style.display = "none";
-// });
+const flashMsg = document.querySelector(".flash-msg");
+
+if (flashMsg) {
+    setTimeout(() => {
+        flashMsg.style.display = "none";
+    }, 10000);
+
+    flashMsg.addEventListener("click", () => {
+        flashMsg.style.display = "none";
+    });
+}
 
 function redirectToShow(productId) {
     window.location.href = "/collections/show/" + productId;

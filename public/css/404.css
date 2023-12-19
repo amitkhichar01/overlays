@@ -1,0 +1,70 @@
+.page-not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #000000;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.title-404 {
+    font-size: 3em;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    opacity: 0.5;
+}
+
+.subtitle-404 {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 1rem;
+    color: #ffffff;
+}
+
+.description-404 {
+    font-size: 1em;
+    margin: 1.5rem 1rem 1rem;
+    opacity: 0.8;
+
+    color: #ffffff;
+}
+
+.home-link-404 {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000000;
+    background-color: #39a5ed;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.home-link-404:hover {
+    background-color: #2980b9;
+}
+
+@media (max-width: 1000px) {
+    .title-404 {
+        font-size: 1.5em;
+    }
+    .subtitle-404 {
+        font-size: 1em;
+        font-weight: 400;
+        margin: 1rem;
+    }
+
+    .description-404 {
+        font-size: 0.9em;
+        margin: 1.5rem 1rem 1rem;
+    }
+
+    .home-link-404 {
+        padding: 0.5rem;
+        font-size: 0.9em;
+    }
+}

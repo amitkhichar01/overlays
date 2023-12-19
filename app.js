@@ -42,7 +42,7 @@ app.use(express.static("public"));
 app.use(cookieParser("signedCookie"));
 
 const sessionOptions = {
-    secret: "classroom",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
 
@@ -76,12 +76,12 @@ app.use("/account", account);
 app.use("/collections", collections);
 
 app.all("*", (req, res, next) => {
-    next(new ExpressError(404, "The page you’re looking for can’t be found."));
+    res.render("404.ejs");
 });
 
 //error-handling middleware
 app.use((error, req, res, next) => {
-    let { statusCode = "404", message = "page not found" } = error;
+    let { statusCode = 500, message = "Something went wrong" } = error;
     res.status(statusCode).render("error.ejs", { message });
 });
 

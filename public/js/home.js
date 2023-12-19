@@ -26,6 +26,7 @@ function updateBannerImage() {
 }
 
 updateBannerImage();
+
 window.addEventListener("resize", updateBannerImage);
 const scrollerContainer = document.querySelector(".home-jackets-section");
 const scroller = document.querySelector(".home-jackets-container");
@@ -83,10 +84,25 @@ gsap.from("#hero-image", {
     scale: 1.5,
 });
 
+gsap.from(".collections-gsap", {
+    opacity: 0,
+    duration: 1,
+    scale: 0.5,
+    scrollTrigger: {
+        trigger: ".collections-gsap",
+        scroller: "body",
+        start: "top 90%",
+        end: "top 60%",
+        scrub: 2,
+    },
+});
+
 gsap.from(".benefit-section", {
     x: -100,
     opacity: 0,
-    duration: 2,
+    scale: 0.5,
+
+    duration: 1,
     scrollTrigger: {
         trigger: ".benefit-section",
         scroller: "body",
@@ -95,12 +111,40 @@ gsap.from(".benefit-section", {
     },
 });
 
-gsap.from(".banner-img", {
+gsap.utils.toArray(".banner-img").forEach((element) => {
+    gsap.from(element, {
+        x: -200,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: element,
+            scroller: "body",
+            end: "top 80%",
+            scrub: 2,
+        },
+    });
+});
+
+gsap.utils.toArray(".layer-img-container img").forEach((element) => {
+    gsap.from(element, {
+        opacity: 0,
+        duration: 0.5,
+        scale: 0.5,
+        scrollTrigger: {
+            trigger: element,
+            scroller: "body",
+            end: "top 70%",
+            scrub: 2,
+        },
+    });
+});
+
+gsap.from("#instagram-section p", {
     opacity: 0,
     duration: 1,
     scale: 0.5,
     scrollTrigger: {
-        trigger: ".banner-img",
+        trigger: "#instagram-section p",
         scroller: "body",
         end: "top 70%",
         scrub: 2,

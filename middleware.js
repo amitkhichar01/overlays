@@ -3,7 +3,7 @@ const User = require("./models/users.js");
 const { userSchemaJoi } = require("./Schema.js");
 const wrapAsync = require("./utils/wrapAsync.js");
 
-const validateUser = wrapAsync((req, res, next) => {
+const validateUser = (req, res, next) => {
     const { error } = userSchemaJoi.validate(req.body);
 
     if (error) {
@@ -11,22 +11,21 @@ const validateUser = wrapAsync((req, res, next) => {
 
         const errorType = error.details && error.details[0] && error.details[0].type;
 
-        return next(
-            new ExpressError(
-                400,
-                errorType === "string.email" ? "Please enter a valid email address" : errorMessage
-            )
-        );
+        req.flash("error", errorMessage);
+        return res.redirect("/account/register");
+    } else {
+        next();
     }
-
-    next();
-});
+};
 
 const checkEmailUnique = wrapAsync(async (req, res, next) => {
     const { email } = req.body.user;
-    const isEmailUnique = await User.findOne({ email });
+    const isEmailUnique = await User.findOne({ email: email });
 
-    if (isEmailUnique) return next(new ExpressError(400, "Email is already registered"));
+    if (isEmailUnique) {
+        req.flash("error", "Email is already registered");
+        return res.redirect("/account/register");
+    }
 
     next();
 });
