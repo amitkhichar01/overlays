@@ -26,8 +26,8 @@ function updateBannerImage() {
 }
 
 updateBannerImage();
-
 window.addEventListener("resize", updateBannerImage);
+
 const scrollerContainer = document.querySelector(".home-jackets-section");
 const scroller = document.querySelector(".home-jackets-container");
 let currentTranslateX = 0;
