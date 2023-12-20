@@ -1,0 +1,16 @@
+.error-container {
+    height: 70vh;
+    padding-top: 80px;
+    background-color: #252630;
+}
+.error-msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alert-heading {
+    font-size: 1.3rem;
+    color: #e74747;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+}
