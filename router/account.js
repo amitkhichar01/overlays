@@ -16,9 +16,14 @@ router.post(
     wrapAsync(async (req, res, next) => {
         let { username, email, password } = req.body.user;
         const newUser = new User({ username, email });
-        const registeredUser = await User.register(newUser, password);
-        req.flash("success", "Account successfully created.");
-        res.redirect("/");
+        const registerUser = await User.register(newUser, password);
+        req.login(registerUser, (err) => {
+            if (err) {
+                return next(err);
+            }
+            req.flash("success", "Account successfully created.");
+            res.redirect("/");
+        });
     })
 );
 
