@@ -8,11 +8,11 @@ const path = require("path");
 const ejsMate = require("ejs-mate");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
-const ExpressError = require("./utils/ExpressError.js");
 const pages = require("./router/pages.js");
 const account = require("./router/account.js");
 const collections = require("./router/collections.js");
 const session = require("express-session");
+const MongoStore = require("connect-mongo")(session);
 const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
@@ -39,13 +39,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static("public"));
-app.use(cookieParser("signedCookie"));
 
 const sessionOptions = {
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
-
+    store: new MongoStore({ url: dbUrl }),
     cookie: {
         expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
         maxAge: 7 * 24 * 60 * 60 * 1000,
